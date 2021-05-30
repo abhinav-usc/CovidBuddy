@@ -55,6 +55,32 @@ form {
   padding: 0 0.4rem;
   position: relative;
 }
+.input-field1 {
+  max-width: 300px;
+  width: 100%;
+  height: 55px;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+.input-field1 input:placeholder-shown {
+  color: #aaa;
+  font-weight: 600;
+}
+.input-field1 input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: rgb(124, 124, 124);
+}
 
 .input-field i {
   text-align: center;
@@ -349,7 +375,7 @@ form.sign-in-form {
   top: 60px;
   left: 0;
   width: 15%;
-  height: 92%;
+  height: 148%;
   background: rgb(109, 104, 246);
   z-index: -1;
   position: absolute;
@@ -382,27 +408,31 @@ form.sign-in-form {
   top: 5px;
   left: 10px;
   padding: 0.2rem;
-  position: absolute;
-  z-index: 3;
+  position: fixed;
+  z-index: 4;
 }
 
 .navbar {
   overflow: hidden;
   position: fixed; /* Set the navbar to fixed position */
-  left: 800px;
+  left: 0px;
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   height: 60px;
+  background-color: rgb(228, 226, 255);
+  z-index: 3;
 }
 
 .navbar a {
   float: left;
   display: block;
+  background: rgb(228, 226, 255);
   color: rgb(49, 49, 49);
   text-align: center;
   height: 60px;
   padding: 14px;
   text-decoration: none;
+  z-index: 3;
 }
 
 .navbar a:hover {
@@ -451,4 +481,207 @@ form.sign-in-form {
 
 .logout-button:hover {
   background: rgb(228, 226, 255);
+}
+
+.actionpane {
+  align-items: center;
+  justify-content: center;
+  left: 15%;
+  top: 60px;
+  width: 85%;
+  position: absolute;
+  padding: 1rem;
+}
+
+.titletext {
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  padding-left: 37%;
+  font-size: 1.5rem;
+  color: rgb(109, 104, 246);
+}
+
+.dashboard {
+  top: 80px;
+  padding: 8rem;
+  left: 6%;
+  width: 43%;
+  height: 37%;
+  background: rgb(210, 209, 226);
+  align-items: center;
+  position: absolute;
+  border-radius: 6%;
+  border: 12px solid rgb(180, 179, 219);
+}
+
+.AIBot {
+  top: 80px;
+  padding: 8rem;
+  left: 53%;
+  width: 43%;
+  height: 37%;
+  background: rgb(210, 209, 226);
+  z-index: -1;
+  position: absolute;
+  border-radius: 6%;
+  border: 12px solid rgb(180, 179, 219);
+}
+
+.text1 {
+  position: absolute;
+  top: 1px;
+  padding: 7rem;
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  border-radius: 6%;
+}
+
+.text1 p {
+  padding: 0.3rem;
+}
+
+.text1 h2 {
+  padding-bottom: 2%;
+}
+
+.logs-button {
+  position: absolute;
+  top: 16rem;
+  left: 13rem;
+  margin: 0;
+  background: white;
+  border: white;
+  width: 130px;
+  height: 41px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 2rem;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.logs-button:hover {
+  background: rgb(109, 104, 246);
+  border: white;
+  color: white;
+}
+
+.text2 {
+  position: absolute;
+  top: 1px;
+  padding: 7rem;
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  border-radius: 6%;
+  left: 32rem;
+}
+
+.text2 p {
+  padding: 0.3rem;
+}
+
+.text2 h2 {
+  padding-bottom: 2%;
+}
+
+.chat-button {
+  position: absolute;
+  top: 17.3rem;
+  left: 14.8rem;
+  margin: 0;
+  background: white;
+  border: white;
+  width: 130px;
+  height: 41px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 2rem;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.chat-button:hover {
+  background: rgb(109, 104, 246);
+  border: white;
+  color: white;
+}
+
+.graph1 {
+  top: 170%;
+  padding: 2rem;
+  left: 6%;
+  width: 89%;
+  height: 140%;
+  background: rgb(210, 209, 226);
+  z-index: 1;
+  position: absolute;
+  border-radius: 9%;
+  border: 12px solid rgb(180, 179, 219);
+}
+
+.form {
+  top: 80px;
+  padding: 8rem;
+  left: 6%;
+  width: 90%;
+  height: 700%;
+  background: rgb(210, 209, 226);
+  align-items: center;
+  position: absolute;
+  border-radius: 6%;
+  border: 12px solid rgb(180, 179, 219);
+}
+
+.submit-button {
+  position: absolute;
+  top: 30.3rem;
+  left: 30.8rem;
+  margin: 0;
+  background: white;
+  border: white;
+  width: 130px;
+  height: 41px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 2rem;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.submit-button:hover {
+  background: rgb(109, 104, 246);
+  border: white;
+  color: white;
+}
+.cough {
+  left: 20rem;
+}
+
+.cough1 {
+  position: absolute;
+  top: 1.2rem;
+  left: 14rem;
+  size: 6rem;
+}
+
+.breath1 {
+  position: absolute;
+  left: 14rem;
+  top: 1.2rem;
+  size: 6rem;
+}
+
+.logsdata {
+  position: absolute;
+  top: 30.3rem;
+  left: 30.8rem;
 }

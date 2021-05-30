@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CovidBuddy</title>
     <link rel="stylesheet" href= "style.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
 </head>
 <body>
     <div class="containers">
@@ -27,6 +29,36 @@
                     <h3 > CovidBuddy </h3>
                 </div>
                 <div class="navbar">
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a> 
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>
+                    <a></a>                                                            
                     <a href="main.html">Home</a>
                     <a href="logs.html">Logs</a>
                     <a href="chat.html">Chat</a>
@@ -37,6 +69,43 @@
                 
             </div>
             <div class="actionpane">
+                <div class="titletext">
+                    <h3>CovidBuddy Logs</h3>
+                 </div>
+                 <canvas class="form" id="Canvas">     
+                </canvas> 
+                <div class="text1">
+                <h2> Symptoms</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input id="spo2" type="number" placeholder="SPO2 Level"/>
+                    </div>
+                    
+                    <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input  id="fever" type="number" placeholder="Fever (in Farenheit)"/>
+                    </div>
+                    <div class="input-field1">
+                    <i class="fas fa-lock"></i>
+                    <input readonly class = "cough"  type="text" value="Cough"/>
+                    <input class = "cough1" id="Cough" type="checkbox" value="Cough"/>
+                    </div>  
+                    <div class="input-field1">
+                        <i class="fas fa-lock"></i>
+
+                        <input readonly class= "breath" type="text" value="Breathlessness" />
+                        <input class = "breath1" id="Breath" type="checkbox" value="Breath"/>
+                        </div> 
+
+                
+                    <button onclick="update()" id= "submit" class="submit-button">Update Logs</button>
+                
+                </div>
+                <div class="logsdata">
+                    <p id="data">
+                        
+                    </p>
+                </div>
                
 
             </div>
