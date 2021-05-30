@@ -1,1 +1,2 @@
 # CovidBuddy
+Amidst the second wave of Covid-19 in India, several patients are quarantined at home due to their mild symptoms. Under the guidelines of the government, there are several protocols that these patients and their caretakers should follow. However, without access to proper help, some patients, especially older ones are left helpless. CovidBuddy is meant for anyone who wants a helping hand in their recovery from the virus.
