@@ -22,26 +22,34 @@
     var email = document.getElementById("email");
     var password = document.getElementById("password");
     
+    
     const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
     promise.catch(e => alert(e.message));
     alert("Signed Up");
-    open(URL="sign_in.html");
+    window.location.href("sign_in.html");
 }
+
 
   function SignIn(){
     var email = document.getElementById("email");
     var password = document.getElementById("password");
-    const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-    promise.catch(e => alert(e.message)); 
-    auth.onAuthStateChanged(function(user){
-        if(user){
-            var email = user.email;
-            alert("Signed In");
-            open(URL="main.html");
-      }
+    const promise = auth.signInWithEmailAndPassword(email.value, password.value)
+    .then((userCredential) => {
+      // Signed in
+      var user = userCredential.user;
+      window.top.close();
+      window.open("main.html"); 
+      // ...
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert("Invalid User");
     });
+    promise.catch(e => alert(e.message)); 
   }
 
+  
   
 
   var provider = new firebase.auth.GoogleAuthProvider();
@@ -49,27 +57,43 @@
   
   
   function googlesignin(){
-
-    firebase.auth().signInWithRedirect(provider);
-    
+    firebase.auth().signInWithRedirect(provider); 
   }
-  
   
 
   function SignUp(){ 
     var name = document.getElementById("name");
     var email = document.getElementById("email");
     var password = document.getElementById("password");
-    
     if(name.value != "" && email.value != "" && password.value !=""){
-    const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+    const promise = auth.createUserWithEmailAndPassword(email.value, password.value)
+    .then((userCredential) => {
+    // Signed in
+    window.top.close();
+    window.open("sign_in.html");  
+    var user = userCredential.user;
+     })
+    .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ..
+    });
     promise.catch(e => alert(e.message));
-    alert("Signed Up");
-    open(URL="sign_in.html");
+   }else{
+     alert("Enter Username and Password")
    }
   }
 
 
   function SignOut(){
-      auth.SignOut();
+    window.top.close();
+    window.open("sign_in.html"); 
   }
+
+  var canvas = document.getElementById("Canvas");
+if (canvas.getContext) 
+{
+  var ctx = canvas.getContext('2d');
+  ctx.fillStyle='rgb(109, 104, 246)';    // color of fill
+  ctx.fillRect(10, 40, 140, 160); // create rectangle  
+}
